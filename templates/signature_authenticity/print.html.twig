@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style>
+      @page {
+        margin: 0.4cm;
+        font-size:12px;
+        font-family:  DejaVu Sans, sans-serif;
+      }
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        border: 1px solid black;
+        margin:20px auto;
+        
+      }
+      table, th, td {
+        border: 1px solid black;
+        padding:1px 5px;
+      }
+    </style>
+  </head>
+  <body>
+      <div style="padding:10px 20px">
+      
+            <h1 style="border-bottom:2px solid black;text-align:center">Prohlášení o pravosti podpisu </h1>
+
+            <p style="font-weight:bold">Běžné číslo knihy o prohlášeních o pravosti podpisu:	 017410/462/2024</p>
+
+            <p>Já, <b>JUDr. Filip Štípek, advokát</b>, se sídlem v Ústí nad Labem, Hradiště 96/6-8, zapsaný v seznamu advokátů vedeném Českou advokátní komorou pod ev.č. 10621, prohlašuji, že: </p>
+
+            <table>
+                  <tr>
+                        <td>Jméno a příjmení:</td>
+                        <td colspan="2"><b>{{ signature.title }} {{ signature.name }} {{ signature.lastname }}</b></td>
+                  </tr>
+                  <tr>
+                        <td>Datum narození:</td>
+                        <td colspan="2">13.7.1963</td>
+                  </tr>
+                  <tr>
+                        <td>Místo narození:</td>
+                        <td colspan="2">{{ signature.birthplace }}</td>
+                  </tr>
+                  <tr>
+                        <td>Pobyt v ČR:</td>
+                        <td colspan="2">{{ signature.street }}, {{ signature.zip }} {{ signature.city }}</td>
+                  </tr>
+                      <tr>
+                        <td style="width:50%">Jehož totožnost jsem zjistil z jeho/jejího:</td>
+                        <td style="width:30%">Občanský průkaz č.:</td>
+                        <td style="width:20%;text-align:center">{{ signature.proofofidentity }}</td>
+                  </tr>
+            </table>
+
+            <div style="padding:20px 0;border-bottom:2px solid black">
+                  <p>Tuto listinu v jednom vyhotovení přede mnou vlastnoručně podepsal/a.</p>
+                  <p>V Ústí nad Labem, 23. 1. 2024</p>
+                  <p>JUDr. Filip Štípek, advokát</p>
+            </div>
+      </div>
+  
+  
+  </body>
+</html>
+
+

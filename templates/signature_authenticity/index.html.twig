@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SignatureAuthenticityController!{% endblock %}
+
+{% block body %}
+
+<a class="btn btn-primary" href="{{ path('app_signature_authenticity_new') }}">{{ 'New'|trans }}</a>
+    
+   <table class="table mt-5">
+      <tr>
+        <th>{{ 'Name'|trans }}</th>
+        <th>{{ 'Lastname'|trans }}</th>
+        <th>{{ 'Birthplace'|trans }}</th>
+        <th>{{ 'Street'|trans }}</th>
+        <th>{{ 'Zip'|trans }}</th>
+        <th>{{ 'City'|trans }}</th>
+        <th>{{ 'Proof of identity'|trans }}</th>
+        <th></th>
+        <th></th>
+      </tr>  
+    {% for signature in signature_list %}
+            <tr>
+                  <td>{{ signature.name }}</td>
+                  <td>{{ signature.lastname }}</td>
+                  <td>{{ signature.birthplace }}</td>
+                  <td>{{ signature.street }}</td>
+                  <td>{{ signature.zip }}</td>
+                  <td>{{ signature.city }}</td>
+                  <td>{{ signature.proofofidentity }}</td>
+                  <td><a class="btn btn-primary" href="{{ path('app_signature_authenticity_edit', {id: signature.id}) }}">{{ 'Edit'|trans }}</a></td>
+                  <td><a class="btn btn-danger" href="{{ path('app_signature_authenticity_print', {id: signature.id}) }}">PDF</a></td>
+            </tr>
+
+    {% endfor %}
+      </table>
+
+{% endblock %}
